@@ -4,6 +4,7 @@ import java.sql.PreparedStatement;
 
 public class Clientes {
     String codigo, nombre, rfc, tel, dir;
+    String variabletonta;
 
     public Clientes(String codigo, String nombre, String rfc, String tel, String dir) {
         this.codigo = codigo;
