@@ -6,6 +6,7 @@ public class Clientes {
     String codigo, nombre, rfc, tel, dir;
     String variabletonta;
     String otravariabletonta;
+    String otravariabletontamas;
 
     public Clientes(String codigo, String nombre, String rfc, String tel, String dir) {
         this.codigo = codigo;
