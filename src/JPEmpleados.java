@@ -278,6 +278,11 @@ public class JPEmpleados extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Datos Actualizados");
             cnx.entablar(sql, TEmpleados);
 
+            TFCodigo.setText("");
+            TFNom.setText("");
+            TFTel.setText("");
+            TFPuesto.setText("");
+
         } else {
             JOptionPane.showMessageDialog(this, "Error al actualizar");
         }
@@ -305,6 +310,11 @@ public class JPEmpleados extends javax.swing.JPanel {
                 String sql = "SELECT * FROM empleados";
                 JOptionPane.showMessageDialog(this, "Empleado Borrado");
                 cnx.entablar(sql, TEmpleados);
+
+                TFCodigo.setText("");
+                TFNom.setText("");
+                TFTel.setText("");
+                TFPuesto.setText("");
 
             } else {
                 JOptionPane.showMessageDialog(this, "Error al borrar");

@@ -257,20 +257,21 @@ public class JPClientes extends javax.swing.JPanel {
         String rfc = TFRfc.getText();
         String tel = TFTel.getText();
         String dir = TFDir.getText();
-        
+
         Clientes cl = new Clientes(id, nom, rfc, tel, dir);
 
         if (id.equals("")) {
             JOptionPane.showMessageDialog(this, "Hubo un error, intente de nuevo");
-        } else if (cl.insertar(cnx) == 1){
+        } else if (cl.insertar(cnx) == 1) {
             JOptionPane.showMessageDialog(this, "Cliente agregado");
             cnx.entablar("SELECT * FROM clientes", TClientes);
+
             TFId.setText("");
             TFNom.setText("");
             TFTel.setText("");
             TFRfc.setText("");
             TFDir.setText("");
-        } 
+        }
     }//GEN-LAST:event_BRegistrarActionPerformed
 
     private void BActuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BActuActionPerformed
@@ -285,6 +286,12 @@ public class JPClientes extends javax.swing.JPanel {
             String sql = "SELECT * FROM clientes";
             JOptionPane.showMessageDialog(this, "Datos Actualizados");
             cnx.entablar(sql, TClientes);
+
+            TFId.setText("");
+            TFNom.setText("");
+            TFTel.setText("");
+            TFRfc.setText("");
+            TFDir.setText("");
 
         } else {
             JOptionPane.showMessageDialog(this, "Error al actualizar");
@@ -314,6 +321,12 @@ public class JPClientes extends javax.swing.JPanel {
                 String sql = "SELECT * FROM clientes";
                 JOptionPane.showMessageDialog(this, "Cliente Borrado");
                 cnx.entablar(sql, TClientes);
+
+                TFId.setText("");
+                TFNom.setText("");
+                TFTel.setText("");
+                TFRfc.setText("");
+                TFDir.setText("");
 
             } else {
                 JOptionPane.showMessageDialog(this, "Error al borrar");

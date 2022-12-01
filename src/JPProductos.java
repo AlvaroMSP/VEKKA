@@ -407,6 +407,15 @@ public class JPProductos extends javax.swing.JPanel {
         if (patient.insertar(cnx) == 1) {
             JOptionPane.showMessageDialog(this, "Producto agregado");
             cnx.entablar("SELECT * FROM productos", TProductos);
+
+            TFIdProducto.setText("");
+            TFNombrep.setText("");
+            TFDescripcion.setText("");
+            TFPrecioBa.setText("");
+            TFPrecioSu.setText("");
+            TFCantidad.setText("");
+            LFoto.setIcon(null);
+
         } else {
             JOptionPane.showMessageDialog(this, "Hubo un error, intente de nuevo");
         }
@@ -464,6 +473,14 @@ public class JPProductos extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Datos Actualizados");
             cnx.entablar(sql, TProductos);
 
+            TFIdProducto.setText("");
+            TFNombrep.setText("");
+            TFDescripcion.setText("");
+            TFPrecioBa.setText("");
+            TFPrecioSu.setText("");
+            TFCantidad.setText("");
+            LFoto.setIcon(null);
+
         } else {
             JOptionPane.showMessageDialog(this, "Error al actualizar");
         }
@@ -487,6 +504,14 @@ public class JPProductos extends javax.swing.JPanel {
                 String sql = "SELECT * FROM productos";
                 JOptionPane.showMessageDialog(this, "Producto Borrado");
                 cnx.entablar(sql, TProductos);
+
+                TFIdProducto.setText("");
+                TFNombrep.setText("");
+                TFDescripcion.setText("");
+                TFPrecioBa.setText("");
+                TFPrecioSu.setText("");
+                TFCantidad.setText("");
+                LFoto.setIcon(null);
 
             } else {
                 JOptionPane.showMessageDialog(this, "Error al borrar");

@@ -31,9 +31,7 @@ public class JPPedidos extends javax.swing.JPanel {
         TListaProductos.setRowHeight(80);
 
         this.cnx = cnx;
-        
-        
-        
+
     }
 
     /**
@@ -50,7 +48,7 @@ public class JPPedidos extends javax.swing.JPanel {
         jLabel12 = new javax.swing.JLabel();
         TFBuscar = new javax.swing.JTextField();
         BtnBuscar = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
+        PPedido = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -133,8 +131,8 @@ public class JPPedidos extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel3.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel3.setToolTipText("");
+        PPedido.setBackground(new java.awt.Color(204, 204, 255));
+        PPedido.setToolTipText("");
 
         jLabel6.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jLabel6.setText("Código del producto:");
@@ -185,54 +183,54 @@ public class JPPedidos extends javax.swing.JPanel {
         jLabel13.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jLabel13.setText("Nombre del producto:");
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout PPedidoLayout = new javax.swing.GroupLayout(PPedido);
+        PPedido.setLayout(PPedidoLayout);
+        PPedidoLayout.setHorizontalGroup(
+            PPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PPedidoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(PPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PPedidoLayout.createSequentialGroup()
                         .addGap(7, 7, 7)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
+                        .addGroup(PPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PPedidoLayout.createSequentialGroup()
                                     .addComponent(jLabel10)
                                     .addGap(28, 28, 28)
-                                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(PPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(SPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jLabel8))
                                     .addGap(67, 67, 67))
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(PPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(SCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel13)
                                     .addComponent(TFNombrep, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(PPedidoLayout.createSequentialGroup()
+                                .addGroup(PPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel6)
                                     .addComponent(TFCodigop, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(BLeer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGroup(PPedidoLayout.createSequentialGroup()
                         .addComponent(jLabel11)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGroup(PPedidoLayout.createSequentialGroup()
                         .addComponent(jLabel9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(LFoto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PPedidoLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(LSubir)
                         .addGap(11, 11, 11)))
                 .addContainerGap())
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        PPedidoLayout.setVerticalGroup(
+            PPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PPedidoLayout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(PPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(BLeer)
                     .addComponent(TFCodigop, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -240,20 +238,20 @@ public class JPPedidos extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(TFNombrep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(PPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(jLabel10))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(PPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel11)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(PPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PPedidoLayout.createSequentialGroup()
                         .addGap(64, 64, 64)
                         .addComponent(jLabel9))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGroup(PPedidoLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(LFoto, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -426,7 +424,7 @@ public class JPPedidos extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PPedido, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(PProducto, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -451,7 +449,7 @@ public class JPPedidos extends javax.swing.JPanel {
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PPedido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -479,13 +477,13 @@ public class JPPedidos extends javax.swing.JPanel {
                     + "JOIN productos ON idproductos = productos_idproductos WHERE pedidos_folio = '" + folio + "'";
             cnx.entablar(sql, TListaProductos);
             calcularTotal(TListaProductos, 5, LTotal);
-            
+
             TFCodigop.setText("");
             TFNombrep.setText("");
             SPrecio.setValue(0);
             SCantidad.setValue(1);
-            
-            
+            LFoto.setIcon(null);
+
         } else {
             JOptionPane.showMessageDialog(this, "Hubo un error, intente de nuevo");
         }
@@ -496,6 +494,7 @@ public class JPPedidos extends javax.swing.JPanel {
         if (fc.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
             File archivo = fc.getSelectedFile();
             foto = new ImageIcon(archivo.getPath());
+            LSubir.setVisible(true);
             LFoto.setIcon(new ImageIcon(cnx.escalarImagen(foto.getImage(), 200, 200)));
         }
     }//GEN-LAST:event_LSubirMousePressed
@@ -532,6 +531,12 @@ public class JPPedidos extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(this, "Producto actualizado");
                 cnx.entablar(sql, TListaProductos);
                 calcularTotal(TListaProductos, 5, LTotal);
+
+                TFCodigop.setText("");
+                TFNombrep.setText("");
+                SPrecio.setValue(0);
+                SCantidad.setValue(1);
+                LFoto.setIcon(null);
             } else {
                 JOptionPane.showMessageDialog(this, "No se pudo, consultalo en el administrador del sistema");
             }
@@ -554,6 +559,12 @@ public class JPPedidos extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(this, "Producto cancelado");
                 cnx.entablar(sql, TListaProductos);
                 calcularTotal(TListaProductos, 5, LTotal);
+
+                TFCodigop.setText("");
+                TFNombrep.setText("");
+                SPrecio.setValue(0);
+                SCantidad.setValue(1);
+                LFoto.setIcon(null);
             } else {
                 JOptionPane.showMessageDialog(this, "No se pudo, consultalo en el administrador del sistema");
             }
@@ -589,6 +600,7 @@ public class JPPedidos extends javax.swing.JPanel {
             //poner codigo para mostrar el control de los paneles
             folio = cnx.obtenerDato("SELECT MAX(folio) FROM pedidos");
             JOptionPane.showMessageDialog(this, "Listo para agregar productos");
+            TFCliente.setText("");
 
         } else {
             JOptionPane.showMessageDialog(this, "Inserte el codigo de Cliente");
@@ -601,7 +613,7 @@ public class JPPedidos extends javax.swing.JPanel {
 
         if (ren >= 0) {
             TFCodigop.setText(modelo.getValueAt(ren, 1).toString());
-            TFNombrep.setText(modelo.getValueAt(ren,2).toString());
+            TFNombrep.setText(modelo.getValueAt(ren, 2).toString());
             SPrecio.setValue(Integer.valueOf(modelo.getValueAt(ren, 3).toString()));
             SCantidad.setValue(Integer.valueOf(modelo.getValueAt(ren, 4).toString()));
             foto = new ImageIcon(cnx.escalarImagen(((ImageIcon) modelo.getValueAt(ren, 6)).getImage(), LFoto.getWidth(), LFoto.getHeight()));
@@ -644,6 +656,7 @@ public class JPPedidos extends javax.swing.JPanel {
     private javax.swing.JLabel LFoto;
     private javax.swing.JLabel LSubir;
     private javax.swing.JLabel LTotal;
+    private javax.swing.JPanel PPedido;
     private javax.swing.JPanel PProducto;
     private javax.swing.JSpinner SCantidad;
     private javax.swing.JSpinner SPrecio;
@@ -664,7 +677,6 @@ public class JPPedidos extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
