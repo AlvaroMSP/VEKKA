@@ -433,12 +433,13 @@ public class JPPedidos extends javax.swing.JPanel {
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
+                            .addComponent(jScrollPane1)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(jLabel7)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(LTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane1))
+                                .addComponent(LTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(8, 8, 8)))
                         .addContainerGap())))
         );
         layout.setVerticalGroup(
@@ -452,16 +453,13 @@ public class JPPedidos extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(174, 174, 174)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(LTotal)
-                            .addComponent(jLabel7)))))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(LTotal)
+                        .addComponent(jLabel7))
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -481,6 +479,13 @@ public class JPPedidos extends javax.swing.JPanel {
                     + "JOIN productos ON idproductos = productos_idproductos WHERE pedidos_folio = '" + folio + "'";
             cnx.entablar(sql, TListaProductos);
             calcularTotal(TListaProductos, 5, LTotal);
+            
+            TFCodigop.setText("");
+            TFNombrep.setText("");
+            SPrecio.setValue(0);
+            SCantidad.setValue(1);
+            
+            
         } else {
             JOptionPane.showMessageDialog(this, "Hubo un error, intente de nuevo");
         }
@@ -586,7 +591,7 @@ public class JPPedidos extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Listo para agregar productos");
 
         } else {
-            JOptionPane.showMessageDialog(this, "Error");
+            JOptionPane.showMessageDialog(this, "Inserte el codigo de Cliente");
         }
     }//GEN-LAST:event_BCrearPActionPerformed
 
@@ -595,11 +600,11 @@ public class JPPedidos extends javax.swing.JPanel {
         DefaultTableModel modelo = (DefaultTableModel) TListaProductos.getModel();
 
         if (ren >= 0) {
-            TFCodigop.setText(modelo.getValueAt(ren, 0).toString());
-            TFNombrep.setText(modelo.getValueAt(ren, 1).toString());
-            SCantidad.setValue(Integer.valueOf(modelo.getValueAt(ren, 2).toString()));
+            TFCodigop.setText(modelo.getValueAt(ren, 1).toString());
+            TFNombrep.setText(modelo.getValueAt(ren,2).toString());
             SPrecio.setValue(Integer.valueOf(modelo.getValueAt(ren, 3).toString()));
-            foto = new ImageIcon(cnx.escalarImagen(((ImageIcon) modelo.getValueAt(ren, 5)).getImage(), LFoto.getWidth(), LFoto.getHeight()));
+            SCantidad.setValue(Integer.valueOf(modelo.getValueAt(ren, 4).toString()));
+            foto = new ImageIcon(cnx.escalarImagen(((ImageIcon) modelo.getValueAt(ren, 6)).getImage(), LFoto.getWidth(), LFoto.getHeight()));
             LFoto.setIcon(foto);
         }
     }//GEN-LAST:event_TListaProductosMousePressed

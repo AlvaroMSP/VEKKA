@@ -265,6 +265,11 @@ public class JPClientes extends javax.swing.JPanel {
         } else if (cl.insertar(cnx) == 1){
             JOptionPane.showMessageDialog(this, "Cliente agregado");
             cnx.entablar("SELECT * FROM clientes", TClientes);
+            TFId.setText("");
+            TFNom.setText("");
+            TFTel.setText("");
+            TFRfc.setText("");
+            TFDir.setText("");
         } 
     }//GEN-LAST:event_BRegistrarActionPerformed
 

@@ -81,17 +81,14 @@ public class JPEmpleados extends javax.swing.JPanel {
         TEmpleados.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         TEmpleados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
                 "Código", "Nombre", "Teléfono", "Puesto"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false
+                true, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -182,8 +179,8 @@ public class JPEmpleados extends javax.swing.JPanel {
                         .addComponent(BReporte)
                         .addGap(24, 24, 24))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 459, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 470, Short.MAX_VALUE)
                         .addContainerGap())))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -241,13 +238,19 @@ public class JPEmpleados extends javax.swing.JPanel {
         String pue = TFPuesto.getText();
 
         Empleados em = new Empleados(id, nom, tel, pue);
-        
+
         if (id.equals("")) {
             JOptionPane.showMessageDialog(this, "Hubo un error, intente de nuevo");
-        } else if (em.insertar(cnx) == 1){
+        } else if (em.insertar(cnx) == 1) {
             JOptionPane.showMessageDialog(this, "Empleado agregado");
             cnx.entablar("SELECT * FROM empleados", TEmpleados);
-        } 
+
+            TFCodigo.setText("");
+            TFNom.setText("");
+            TFTel.setText("");
+            TFPuesto.setText("");
+
+        }
     }//GEN-LAST:event_BRegistrarActionPerformed
 
     private void TEmpleadosMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TEmpleadosMousePressed
