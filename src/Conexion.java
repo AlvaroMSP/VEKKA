@@ -6,7 +6,6 @@ import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.sql.*;
 import java.util.ArrayList;
 import javax.imageio.ImageIO;
 
@@ -16,8 +15,15 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 
 import java.io.File;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 import java.util.Map;
 import net.sf.jasperreports.engine.JasperFillManager;
@@ -358,6 +364,7 @@ public class Conexion {
             jviewer.setVisible(true);
             return 1;
         } catch (Exception j) {
+            System.out.println("Error Reporte: "+j.getMessage());
             return 0;
         }
     }

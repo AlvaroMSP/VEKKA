@@ -22,7 +22,7 @@ public class JPPedidos extends javax.swing.JPanel {
 
     Conexion cnx;
     ImageIcon foto;
-    String codigoe = "E01";
+    String codigoe = "";
     String folio = "0";
 
     public JPPedidos(Conexion cnx) {
@@ -34,6 +34,10 @@ public class JPPedidos extends javax.swing.JPanel {
 
     }
 
+    public void ponerEmpleado(String empleado){
+        codigoe = empleado;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -626,7 +630,7 @@ public class JPPedidos extends javax.swing.JPanel {
         String reporte = System.getProperty("user.dir") + "/nota.jasper";
 
         Map parametros = new HashMap();
-        parametros.put("clavePel", cla);
+        parametros.put("folio", Integer.valueOf(cla) );
 
         cnx.ejecutarReporte(reporte, parametros);
     }//GEN-LAST:event_BtnReporteActionPerformed

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 7.2.0.final using JasperReports Library version 6.6.0  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="productos" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9d9fec84-4faf-46e8-95ad-f83632cf2f40">
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="vekka"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="store"/>
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<queryString>
 		<![CDATA[SELECT * FROM productos]]>
@@ -133,7 +133,7 @@
 				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
 			</textField>
 			<image hAlign="Center" vAlign="Middle" onErrorType="Blank">
-				<reportElement mode="Transparent" x="450" y="0" width="70" height="70" backcolor="#FFFFFF" uuid="83468d4a-0534-4be5-a234-9f8f362ffd28"/>
+				<reportElement mode="Transparent" x="466" y="0" width="70" height="70" backcolor="#FFFFFF" uuid="83468d4a-0534-4be5-a234-9f8f362ffd28"/>
 				<imageExpression><![CDATA[$F{fotop}]]></imageExpression>
 			</image>
 		</band>

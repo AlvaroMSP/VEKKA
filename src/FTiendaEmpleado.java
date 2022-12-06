@@ -12,12 +12,12 @@ import javax.swing.JOptionPane;
  *
  * @author drlias
  */
-public class FTienda extends javax.swing.JFrame {
+public class FTiendaEmpleado extends javax.swing.JFrame {
 
     Conexion cnx = new Conexion();
     String empleado = "";
     
-    public FTienda() {
+    public FTiendaEmpleado() {
         initComponents();
         setIconImage(new ImageIcon(getClass().getResource("/img/logo.png")).getImage());
         setExtendedState(MAXIMIZED_BOTH);
@@ -46,7 +46,6 @@ public class FTienda extends javax.swing.JFrame {
         LUsuario = new javax.swing.JLabel();
         jToolBar1 = new javax.swing.JToolBar();
         BClientes = new javax.swing.JToggleButton();
-        BEmpleados = new javax.swing.JToggleButton();
         BProductos = new javax.swing.JToggleButton();
         BPedidos = new javax.swing.JToggleButton();
         PFondo = new javax.swing.JPanel();
@@ -68,7 +67,7 @@ public class FTienda extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(20, 0, 110, 110);
 
-        jLabel3.setText("Sistema de Administración");
+        jLabel3.setText("Sistema de Administración Para Empleados");
         jPanel1.add(jLabel3);
         jLabel3.setBounds(140, 70, 350, 16);
 
@@ -97,20 +96,6 @@ public class FTienda extends javax.swing.JFrame {
             }
         });
         jToolBar1.add(BClientes);
-
-        buttonGroup1.add(BEmpleados);
-        BEmpleados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Writer_Male_Light.png"))); // NOI18N
-        BEmpleados.setText("Empleados");
-        BEmpleados.setFocusable(false);
-        BEmpleados.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        BEmpleados.setPreferredSize(new java.awt.Dimension(110, 100));
-        BEmpleados.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        BEmpleados.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BEmpleadosActionPerformed(evt);
-            }
-        });
-        jToolBar1.add(BEmpleados);
 
         BProductos.setBackground(new java.awt.Color(153, 0, 255));
         buttonGroup1.add(BProductos);
@@ -192,13 +177,6 @@ public class FTienda extends javax.swing.JFrame {
 
     }//GEN-LAST:event_BProductosActionPerformed
 
-    private void BEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BEmpleadosActionPerformed
-        PFondo.removeAll();
-        JPEmpleados jpe = new JPEmpleados(cnx);
-        PFondo.add(jpe);
-        PFondo.updateUI();
-    }//GEN-LAST:event_BEmpleadosActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -236,7 +214,6 @@ public class FTienda extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton BClientes;
-    private javax.swing.JToggleButton BEmpleados;
     private javax.swing.JToggleButton BPedidos;
     private javax.swing.JToggleButton BProductos;
     private javax.swing.JLabel LUsuario;
@@ -253,4 +230,5 @@ public class FTienda extends javax.swing.JFrame {
         empleado = user;
         LUsuario.setText("Usuario: "+empleado);
     }
+
 }
