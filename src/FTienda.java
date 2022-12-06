@@ -1,5 +1,6 @@
 
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -21,9 +22,9 @@ public class FTienda extends javax.swing.JFrame {
         setExtendedState(MAXIMIZED_BOTH);
         
         if(cnx.conectar("localhost","store","root","")==1){
-            
+            JOptionPane.showMessageDialog(this, "SI FUNCIONÓ, YA NO INTENTES DE NUEVO");
         }else{
-            
+            JOptionPane.showMessageDialog(this, "NO FUNCIONÓ, INTENTA DE NUEVO");
         }
     }
 
