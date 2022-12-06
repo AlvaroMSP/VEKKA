@@ -320,9 +320,9 @@ public class JPPedidos extends javax.swing.JPanel {
                         .addGap(29, 29, 29))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(BtnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(BtnReporte)
-                        .addGap(31, 31, 31))))
+                        .addGap(26, 26, 26))))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -622,7 +622,7 @@ public class JPPedidos extends javax.swing.JPanel {
     }//GEN-LAST:event_BtnDelActionPerformed
 
     private void BtnReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnReporteActionPerformed
-        String cla = TFCliente.getText();
+        String cla = TFFolio.getText();
         String reporte = System.getProperty("user.dir") + "/nota.jasper";
 
         Map parametros = new HashMap();

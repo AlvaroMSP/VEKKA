@@ -43,14 +43,15 @@ public class FTienda extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jToolBar1 = new javax.swing.JToolBar();
+        BClientes = new javax.swing.JToggleButton();
         BEmpleados = new javax.swing.JToggleButton();
         BProductos = new javax.swing.JToggleButton();
-        BClientes = new javax.swing.JToggleButton();
         BPedidos = new javax.swing.JToggleButton();
         PFondo = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Productos VEKKA - Sistema de Administración ");
+        setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel1.setBackground(new java.awt.Color(188, 161, 220));
         jPanel1.setLayout(null);
@@ -76,6 +77,20 @@ public class FTienda extends javax.swing.JFrame {
         jToolBar1.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jToolBar1.setRollover(true);
         jToolBar1.setToolTipText("");
+
+        buttonGroup1.add(BClientes);
+        BClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Clients.png"))); // NOI18N
+        BClientes.setText("Clientes");
+        BClientes.setFocusable(false);
+        BClientes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        BClientes.setPreferredSize(new java.awt.Dimension(110, 100));
+        BClientes.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        BClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BClientesActionPerformed(evt);
+            }
+        });
+        jToolBar1.add(BClientes);
 
         buttonGroup1.add(BEmpleados);
         BEmpleados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Writer_Male_Light.png"))); // NOI18N
@@ -105,20 +120,6 @@ public class FTienda extends javax.swing.JFrame {
             }
         });
         jToolBar1.add(BProductos);
-
-        buttonGroup1.add(BClientes);
-        BClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Clients.png"))); // NOI18N
-        BClientes.setText("Clientes");
-        BClientes.setFocusable(false);
-        BClientes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        BClientes.setPreferredSize(new java.awt.Dimension(110, 100));
-        BClientes.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        BClientes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BClientesActionPerformed(evt);
-            }
-        });
-        jToolBar1.add(BClientes);
 
         buttonGroup1.add(BPedidos);
         BPedidos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Report.png"))); // NOI18N
@@ -162,20 +163,12 @@ public class FTienda extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BEmpleadosActionPerformed
+    private void BPedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BPedidosActionPerformed
         PFondo.removeAll();
-        JPEmpleados jpe = new JPEmpleados(cnx);
-        PFondo.add(jpe);
-        PFondo.updateUI();
-    }//GEN-LAST:event_BEmpleadosActionPerformed
-
-    private void BProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BProductosActionPerformed
-        PFondo.removeAll();
-        JPProductos jpp = new JPProductos(cnx);
+        JPPedidos jpp = new JPPedidos(cnx);
         PFondo.add(jpp);
         PFondo.updateUI();
-        
-    }//GEN-LAST:event_BProductosActionPerformed
+    }//GEN-LAST:event_BPedidosActionPerformed
 
     private void BClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BClientesActionPerformed
         PFondo.removeAll();
@@ -184,12 +177,20 @@ public class FTienda extends javax.swing.JFrame {
         PFondo.updateUI();
     }//GEN-LAST:event_BClientesActionPerformed
 
-    private void BPedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BPedidosActionPerformed
+    private void BProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BProductosActionPerformed
         PFondo.removeAll();
-        JPPedidos jpp = new JPPedidos(cnx);
+        JPProductos jpp = new JPProductos(cnx);
         PFondo.add(jpp);
         PFondo.updateUI();
-    }//GEN-LAST:event_BPedidosActionPerformed
+
+    }//GEN-LAST:event_BProductosActionPerformed
+
+    private void BEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BEmpleadosActionPerformed
+        PFondo.removeAll();
+        JPEmpleados jpe = new JPEmpleados(cnx);
+        PFondo.add(jpe);
+        PFondo.updateUI();
+    }//GEN-LAST:event_BEmpleadosActionPerformed
 
     /**
      * @param args the command line arguments

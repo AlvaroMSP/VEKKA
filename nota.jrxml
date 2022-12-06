@@ -303,7 +303,7 @@ AND folio =  $P{folio}]]>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{cantidadp} * $F{preciod}]]></textFieldExpression>
 			</textField>
-			<image>
+			<image hAlign="Center" vAlign="Middle" onErrorType="Blank">
 				<reportElement x="455" y="10" width="80" height="80" uuid="22222e95-1cfe-4722-9d92-bdf09cdaaba8"/>
 				<imageExpression><![CDATA[$F{fotod}]]></imageExpression>
 			</image>
